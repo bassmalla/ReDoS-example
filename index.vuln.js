@@ -48,7 +48,14 @@ const Vulnerability3 = (req, res) => {
     let matchedStrings = regex1.exec(str1);
     res.end(matchedStrings)
 }
+    const Vulnerability5 = (req, res) => {
     
+    const regex1 = RegExp('(x+x+)+y','g');
+    const str1 = req.body.msg;
+
+    let matchedStrings = regex1.exec(str1);
+    res.end(matchedStrings)
+}
 app.get('/vuln1', Vulnerability1);
 app.get('/vuln2', Vulnerability2);
 app.get('/vuln3', Vulnerability3);
